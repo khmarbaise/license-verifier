@@ -16,10 +16,10 @@
 	<name>License Verifier :: Licenses-Verifier</name>
 
 	<dependencies>
-	    <dependency>
-		<groupId>${project.groupId}</groupId>
-		<artifactId>licenses-verifier-model</artifactId>
-		<version>${project.version}</version>
-	    </dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>licenses-verifier-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

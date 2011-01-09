@@ -23,13 +23,12 @@ import org.apache.maven.model.License;
 
 import com.soebes.maven.plugins.mlv.model.LicenseItem;
 import com.soebes.maven.plugins.mlv.model.LicensesContainer;
-import com.soebes.maven.plugins.mlv.model.LicensesList;
 
 
 /**
  * This class offers you methods to categorize
- * licenses into the different categories. 
- * 
+ * licenses into the different categories.
+ *
  * @author Karl Heinz Marbaise
  */
 public class LicenseValidator {
@@ -64,7 +63,7 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * This will return the Invalid license list from the 
+	 * This will return the Invalid license list from the
 	 * license.xml file or an empty list if no such area
 	 * is defined in the license.xml file.
 	 * @return The List of Invalid licenses.
@@ -83,7 +82,7 @@ public class LicenseValidator {
 
 	/**
 	 * This will return the list of licenses which
-	 * are defined in the warning area of the license.xml 
+	 * are defined in the warning area of the license.xml
 	 * file or an empty list if no such area has been
 	 * defined in the license.xml file.
 	 * @return The list of Warning licenses.
@@ -95,7 +94,7 @@ public class LicenseValidator {
 			return licensesContainer.getWarning().getLicenses();
 		}
 	}
-	
+
 	public void setWarning(ArrayList<LicenseItem> warning) {
 		this.licensesContainer.getWarning().setLicenses(warning);
 	}
@@ -104,11 +103,11 @@ public class LicenseValidator {
 	 * This method will check if the given License name and URL
 	 * is existing in the given CheckLicense class which contains
 	 * a single License which can be described with multiple names
-	 * and multiple URL's. 
+	 * and multiple URL's.
 	 * @param item The Instance of the CheckLicense class.
 	 * @param cl The instance of the License to check
-	 * @return true if the given license URL and Name are 
-	 *   
+	 * @return true if the given license URL and Name are
+	 *
 	 */
 	private boolean checkNamesAndURLs(LicenseItem item, License cl) {
 		boolean result = false;
@@ -122,11 +121,11 @@ public class LicenseValidator {
 	 * This method will check if the given License name or url
 	 * is existing in the given CheckLicense class which contains
 	 * a single License which can be described with multiple names
-	 * and multiple URL's. 
+	 * and multiple URL's.
 	 * This will
 	 * @param item The Instance of the CheckLicense class.
 	 * @param cl The instance of the License to check
-	 * @return true if the given license URL and Name are 
+	 * @return true if the given license URL and Name are
 	 */
 	private boolean checkNamesOrURLs(LicenseItem item, License cl) {
 		boolean result = false;
@@ -140,7 +139,7 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * This will check the given License against the given list of 
+	 * This will check the given License against the given list of
 	 * licenses.
 	 * @param checkList The list of licenses which will be used to check against.
 	 * @param cl The license which will be check to be part of the above list.
@@ -179,9 +178,9 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * This will check if the given license is 
+	 * This will check if the given license is
 	 * part of the <code>valid</code> licenses or not.
-	 * 
+	 *
 	 * @param cl License which will be checked.
 	 * @return true if License is part of the valid licenses category,
 	 * 		false otherwise.
@@ -204,7 +203,7 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * The given list of licenses has to be part of the 
+	 * The given list of licenses has to be part of the
 	 * <code>valid</code> section of the configuration
 	 * file which means in other word an conjunction (logical and).
 	 * @param licenses
@@ -226,7 +225,7 @@ public class LicenseValidator {
 
 	/**
 	 * This method will get the Id's from the valid area
-	 * of the licenses.xml file. 
+	 * of the licenses.xml file.
 //FIXME: More docs. analyze..
 	 * @param licenses
 	 * @return
@@ -281,7 +280,7 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * The given list of licenses has to be part of the 
+	 * The given list of licenses has to be part of the
 	 * <code>invalid</code> section of the configuration
 	 * file which means in other word an conjunction (logical and).
 	 * @param licenses
@@ -302,7 +301,7 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * The given list of licenses has to be part of the 
+	 * The given list of licenses has to be part of the
 	 * <code>warning</code> section of the configuration
 	 * file which means in other word an conjunction (logical and).
 	 * @param licenses
@@ -324,20 +323,20 @@ public class LicenseValidator {
 
 	/**
 	 * TBD: Enhance description
-	 * 
+	 *
 	 * A list of licenses will be categorized as <code>Unknown</code>
 	 * if one or more licenses can be categorized into different categories.
-	 * 
+	 *
 	 * For example if you have a list with three licenses
-	 * 
+	 *
 	 *       isValid  isWarning isInvalid  isUnknown
 	 * A       X
 	 * B       X
 	 * C                X
-	 * 
+	 *
 	 * @param licenses The list with the licenses which will be checked.
 	 * @return true if a license is from no category.
-	 * 
+	 *
 	 */
 	public boolean isUnknown(ArrayList<License> licenses) {
 		boolean result = false;
@@ -373,8 +372,8 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * Check if a given license is not part of 
-	 * one the categories <b>invalid</b>, 
+	 * Check if a given license is not part of
+	 * one the categories <b>invalid</b>,
 	 * <b>valid</b> or <b>warning</b>.
 	 * @param license
 	 * @return true not part of any category false otherwise.
@@ -393,9 +392,9 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * This will check if the given license is 
+	 * This will check if the given license is
 	 * part of the <code>invalid</code> category or not.
-	 * 
+	 *
 	 * @param cl License which will be checked.
 	 * @return true if License part of the invalid licenses false otherwise.
 	 */
@@ -408,9 +407,9 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * This will check if the given license is 
+	 * This will check if the given license is
 	 * part of the <code>warning</code> category or not.
-	 * 
+	 *
 	 * @param cl License which will be checked.
 	 * @return true if License part of the warning licenses false otherwise.
 	 */
@@ -423,11 +422,11 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * Check the given License URL against the CheckLicense which 
+	 * Check the given License URL against the CheckLicense which
 	 * can contain more than one.
 	 * @param item The CheckLicense instance which is used to check.
 	 * @param cl The license which will be checked
-	 * @return true if the License <b>URL</b> is equal to one of the URLs in 
+	 * @return true if the License <b>URL</b> is equal to one of the URLs in
 	 *   CheckLicense.
 	 */
 	private boolean checkUrls(LicenseItem item, License cl) {
@@ -441,11 +440,11 @@ public class LicenseValidator {
 	}
 
 	/**
-	 * Check the given License Name against the CheckLicense which 
+	 * Check the given License Name against the CheckLicense which
 	 * can contain more than one.
 	 * @param item The CheckLicense instance which is used to check.
 	 * @param cl The license which will be checked
-	 * @return true if the License <b>name</b> is equal to one of the Names in 
+	 * @return true if the License <b>name</b> is equal to one of the Names in
 	 *   CheckLicense.
 	 */
 	private boolean checkNames(LicenseItem item, License cl) {

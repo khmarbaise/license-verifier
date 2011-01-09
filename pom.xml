@@ -19,7 +19,7 @@
 	<name>License Verifier :: Reactor</name>
 	<url>http://supose.org/projects/show/mlv</url>
 
-	<inceptionYear>2009</inceptionYear>	
+	<inceptionYear>2010</inceptionYear>
 	<description>The License Verifier Module is intented to check the different artifacts of a project.</description>
 
 	<modules>
@@ -34,7 +34,7 @@
 	</scm>
 
 	<reporting>
-		<plugins>	
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changes-plugin</artifactId>
@@ -54,7 +54,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	
+
 
 	<!-- mvn -Darguments="-Dgpg.passphrase=xxxx" release:perform -->
 </project>
