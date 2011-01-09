@@ -1,0 +1,60 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.soebes.smpp</groupId>
+		<artifactId>smpp</artifactId>
+		<version>0.1</version>
+	</parent>
+
+	<groupId>com.soebes.licenses.verifier</groupId>
+	<artifactId>licenses-verifier-reactor</artifactId>
+	<packaging>pom</packaging>
+	<version>0.2-SNAPSHOT</version>
+
+	<name>License Verifier :: Reactor</name>
+	<url>http://supose.org/projects/show/mlv</url>
+
+	<inceptionYear>2009</inceptionYear>	
+	<description>The License Verifier Module is intented to check the different artifacts of a project.</description>
+
+	<modules>
+		<module>licenses-verifier</module>
+		<module>licenses-verifier-model</module>
+	</modules>
+
+	<scm>
+		<connection>scm:svn:http://svn.serverix/mlv/</connection>
+		<developerConnection>scm:svn:http://svn.serverix/mlv/trunk/</developerConnection>
+		<url>http://supose.org/projects/show/mlv</url>
+	</scm>
+
+	<reporting>
+		<plugins>	
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+				    <issueLinkTemplatePerSystem>
+					<default>http://www.supose.org/issues/show/%ISSUE%</default>
+				    </issueLinkTemplatePerSystem>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>changes-report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+	
+
+	<!-- mvn -Darguments="-Dgpg.passphrase=xxxx" release:perform -->
+</project>
