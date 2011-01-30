@@ -18,7 +18,16 @@ License
 
 Issue Tracker
 -------------
-[The Issue Tracker](http://supose.org/projects/show/mlv)
+[The Issue Tracker](https://github.com/khmarbaise/licence-verifier/issues)
+
+Intention
+---------
+
+This module is used as library.
+
+You can integrate that into your application.
+
+Example: https://github.com/khmarbaise/Maven-Licenses-Verifier-Plugin
 
 Status
 ------

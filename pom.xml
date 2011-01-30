@@ -17,10 +17,41 @@
 	<version>0.2-SNAPSHOT</version>
 
 	<name>License Verifier :: Reactor</name>
-	<url>http://supose.org/projects/show/mlv</url>
+	<url>https://github.com/khmarbaise/licence-verifier</url>
 
 	<inceptionYear>2010</inceptionYear>
 	<description>The License Verifier Module is intented to check the different artifacts of a project.</description>
+
+  <issueManagement>
+    <system>default</system>
+    <url>https://github.com/khmarbaise/licence-verifier/issues</url>
+  </issueManagement>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <distributionManagement>
+    <!-- <repository> <id>ossrh-staging</id> <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+      </repository> <snapshotRepository> <id>ossrh-snapshots</id> <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      </snapshotRepository> <site> <id>site.supose.org</id> <url>scp://minden205.server4you.de:/usr/local/vhosts/site.supose.org/maven-licenses-verifier-plugin</url>
+      </site> -->
+    <repository>
+      <id>mvn.repository.soebes.de</id>
+      <name>SoEBeS Repository</name>
+      <url>scp://h5593.serverkompetenz.net:/usr/local/vhosts/mvn.repository.soebes.de</url>
+    </repository>
+    <site>
+      <id>mvn.supose.soebes.de</id>
+      <url>scp://h5593.serverkompetenz.net:/usr/local/vhosts/mvn.supose.soebes.de</url>
+    </site>
+
+  </distributionManagement>
+
 
 	<modules>
 		<module>licenses-verifier</module>
@@ -28,9 +59,9 @@
 	</modules>
 
 	<scm>
-		<connection>scm:svn:http://svn.serverix/mlv/</connection>
-		<developerConnection>scm:svn:http://svn.serverix/mlv/trunk/</developerConnection>
-		<url>http://supose.org/projects/show/mlv</url>
+		<connection>scm:git:git://github.com/khmarbaise/license-verifier.git</connection>
+		<developerConnection>scm:git:git@github.com:khmarbaise/license-verifier.git</developerConnection>
+		<url>https://github.com/khmarbaise/license-verifier</url>
 	</scm>
 
 	<reporting>
