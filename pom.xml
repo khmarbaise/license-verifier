@@ -12,7 +12,7 @@
   <groupId>com.soebes.licenses.verifier</groupId>
   <artifactId>licenses-verifier-reactor</artifactId>
   <packaging>pom</packaging>
-  <version>0.2</version>
+  <version>0.3-SNAPSHOT</version>
 
   <name>License Verifier :: Reactor</name>
   <url>https://github.com/khmarbaise/licence-verifier</url>
